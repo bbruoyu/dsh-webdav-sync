@@ -9,7 +9,7 @@ import { registerWebRoutes } from './web-route.js';
 import { WebDavSyncSchema, NS, getPresetConfig } from './schema.js';
 
 export const name = 'dsh-webdav-sync';
-export const inject = ['settings', 'commands'] as const;
+export const inject = ['settings', 'commands', 'webServer'] as const;
 
 export function apply(ctx: {
 	get: (key: string) => unknown;
