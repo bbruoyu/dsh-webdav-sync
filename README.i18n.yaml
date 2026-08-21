@@ -1,0 +1,47 @@
+# dsh-webdav-sync
+
+WebDAV sync plugin for DeepSeek Harness — sync settings, sessions, and attachments to any WebDAV server (FnOS NAS, Nextcloud, etc.).
+
+## Quick Start
+
+```sh
+# Install
+dsh plugin add dsh-webdav-sync
+
+# Configure in Settings → webdav-sync
+# Or edit ~/.dsh/webdav-sync.yaml
+```
+
+## Commands
+
+```
+/webdav-sync push      # Upload local → remote
+/webdav-sync pull      # Download remote → local  
+/webdav-sync sync      # Bidirectional (mtime-based)
+/webdav-sync status    # Show connection status
+/webdav-sync test      # Test WebDAV connection
+```
+
+## Supported Servers
+
+- 飞牛NAS (FnOS) — default port 5005
+- Nextcloud
+- ownCloud
+- Synology Drive
+- Any RFC 4918 compliant WebDAV server
+
+## Files Synced
+
+| Local | Remote |
+|-------|--------|
+| `~/.dsh/settings.yaml` | `/dsh/config/settings.yaml` |
+| `~/.dsh/sessions/**/session.jsonl.zstd` | `/dsh/sessions/...` |
+| `~/.dsh/attachments/v1/objects/**` | `/dsh/attachments/v1/objects/` |
+| `~/.dsh/.agent-presets/**` | `/dsh/presets/` |
+| `~/.dsh/pet.json` | `/dsh/config/pet.json` |
+
+NOT synced: `.credentials.yaml`, `node_modules/`, temp files.
+
+## License
+
+MIT

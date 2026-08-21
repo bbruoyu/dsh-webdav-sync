@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+lib/
+
+# Configuration (if any local overrides needed)
+.dsh/
+
+# Environment variables (if any)
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+
+# Temp files
+*.tmp
+*.temp

@@ -1,0 +1,4 @@
+# dsh-webdav-sync bundle patch
+- insert:
+    - id: dsh-webdav-sync
+      name: 'dsh-webdav-sync'
